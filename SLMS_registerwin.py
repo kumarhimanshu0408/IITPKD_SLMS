@@ -12,17 +12,17 @@ class Registration:
 
 
         #adding background image
-        self.background=ImageTk.PhotoImage(file=r"C:\Users\himan\OneDrive\Desktop\1st app\abstract-red-fractal-wallpaper.jpg")
+        self.background=ImageTk.PhotoImage(file="abstract-red-fractal-wallpaper.jpg")
         background=Label(self.root,image=self.background).place(x=0,y=0,relwidth=1,relheight=1)
 
 
         #left image
-        self.left=ImageTk.PhotoImage(file=r"C:\Users\himan\Downloads\imresizer-1685521168313.jpg")
+        self.left=ImageTk.PhotoImage(file="imresizer-1685521168313.jpg")
         left=Label(self.root,image=self.left).place(x=100,y=100,width=400,height=500)
 
 
         #iit logo
-        self.up=ImageTk.PhotoImage(file=r"C:\Users\himan\OneDrive\Desktop\1st app\imresizer-1685520902800.jpg")
+        self.up=ImageTk.PhotoImage(file="imresizer-1685520902800.jpg")
         up=Label(self.root,image=self.up).place(x=0,y=0,width=100,height=100)
         
 
