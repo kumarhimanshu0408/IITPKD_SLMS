@@ -55,7 +55,7 @@ class ResultClass:
         btn_clear=Button(self.root,text="Clear",font=("times now roman",15),bg="lightgray",activebackground="lightgray",cursor="hand2",command=self.clear).place(x=430,y=420,width=120,height=35)
         
         #............adding_photo...............
-        self.bg_image=Image.open(r"C:\Users\himan\OneDrive\Desktop\1st app\result.jpg")
+        self.bg_image=Image.open("result.jpg")
         self.bg_image=self.bg_image.resize((500,300),Image.ANTIALIAS)
         self.bg_image=ImageTk.PhotoImage(self.bg_image)
         self.lbl_bg=Label(self.root,image=self.bg_image).place(x=650,y=100)
