@@ -28,13 +28,13 @@ def speech_to_text():
             print(text_to_speech("Didn't Understand!! Can You Speak Again..."))
 
 def text_to_speech(x):
-    engine = pyttsx3.init()
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice',voices[1].id)
-    rate = engine.getProperty('rate')
-    engine.setProperty('rate',120)
-    engine.say(x)
-    engine.runAndWait()
+    eng = pyttsx3.init()
+    voices = eng.getProperty('voices')
+    eng.setProperty('voice',voices[1].id)
+    rate = eng.getProperty('rate')
+    eng.setProperty('rate',130)
+    eng.say(x)
+    eng.runAndWait()
 
 def isgood():
     print(good)
@@ -107,11 +107,10 @@ def voiceAssist(t):
                     return "result"
                elif "view result" in data1:
                     return "vresult"
-          elif "exit" in data1 and "app" in data1:
-               text_to_speech("Thank You, Have a Nice Day!!")
-               return "exit"
+               else:
+                    text_to_speech("Sorry. Can't answer that. I think my developers forgot to include it in my code")
 
-          elif "exit" in data1 or not isgood():
+          elif "exit" in data1:
                text_to_speech("Thank You, Have a Nice Day!!")
                good=True
                return False
